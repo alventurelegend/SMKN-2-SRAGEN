@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(234, 234, 234);
+  font-family: "roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+
+.title {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  gap: 20px;
+  margin-left: 80px;
+}
+
+.header ul li {
+  list-style: none;
+}
+
+.header a {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(165, 166, 166);
+  transition: color 0.3s transform 0.3s ease-in;
+}
+
+.header a:hover {
+  color: rgb(22, 158, 249);
+}
+
+.header img {
+  width: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content h2 {
+  margin-bottom: -10px;
+  color: rgb(0, 163, 251);
+}
+
+.content h3 {
+  font-style: italic;
+  font-weight: smaller;
+  margin-top: -10px;
+}
+
+.content p {
+  display: flex;
+  flex-direction: column;
+}
+
+.content span {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.writer {
+  font-style: italic;
+  font-weight: smaller;
+}
+
+.content img {
+  display: flex;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.information {
+  display: flex;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.information p {
+  display: flex;
+  align-items:flex-start;
+  text-align: justify;
+  width: 90%;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(105, 105, 105);
+}
+
+.link-footer {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+}
+
+.link-footer img {
+  width: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.link-footer a {
+  text-decoration: none;
+  color: rgb(22, 158, 249);
+}
+
+.link-footer ul {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.link-footer li {
+  list-style: none;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header h2.title {
+    font-size: 15px;
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 45px;
+  }
+
+  .header ul {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  .header ul.open {
+    display: flex;
+  }
+
+  .header ul li {
+    list-style: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .header ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: rgb(165, 166, 166);
+    font-weight: bold;
+  }
+
+  .header ul li a:hover {
+    color: rgb(22, 158, 249);
+  }
+
+  .content h2 {
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .content p {
+    margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    margin-left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menu-toggle:checked ~ ul {
+    display: flex;
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .content {
+    display: flex;
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .information img {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+  }
+}
